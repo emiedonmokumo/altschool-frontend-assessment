@@ -9,14 +9,14 @@ const Search = ({ result }) => {
         fetch('https://api.github.com/users/Emie-Boro/repos')
         .then(response => response.json())
         .then(datas =>{
-          const filtered = datas.filter(data => data.name == searchValue)
+          const filtered = datas.filter(data => data.name.toLowerCase() == searchValue.toLowerCase())
           if(filtered == '') {
             setErrorMessage('Search does not match')
           }
           setTimeout(()=>{
             setErrorMessage('')
           }, 2000)
-          result(datas.filter(data => data.name == searchValue))
+          result(filtered)
         }) 
         .catch(err => console.log(err))
     }

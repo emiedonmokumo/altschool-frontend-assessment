@@ -99,9 +99,6 @@ nav {
     input {
       width: 70%;
     }
-    input[type=submit] {
-      width: 30%;
-    }
   }
 }
 
@@ -117,7 +114,7 @@ button {
   padding: 15px 30px;
   border-radius: 7px;
   color: var(--light-color);
-  background-color: var(--primary-color);
+  background-color: var(--hover-color);
 
   @media (max-width: 426px) {
     font-size: 12px;
