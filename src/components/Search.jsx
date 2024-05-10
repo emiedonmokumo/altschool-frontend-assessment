@@ -28,6 +28,7 @@ const Search = ({ result }) => {
     }
   return (
     <>
+    <p>Note: Case Sensitive</p>
     <span>{errorMessage}</span>
     <form className='search-container' onSubmit={handleSubmit}>
       <input type="search" placeholder='Search Repo' value={searchValue} onChange={(e)=> setSearchValue(e.target.value)} />
