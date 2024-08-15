@@ -6,7 +6,7 @@ const Home = () => {
     const [repos, setRepos] = useState([])
 
   useEffect(()=>{
-    fetch('https://api.github.com/users/Emie-Boro/repos')
+    fetch('https://api.github.com/users/emiedonmokumo/repos')
     .then(response => response.json())
     .then(data =>{setRepos(data)})
     .catch(err => console.log(err))
